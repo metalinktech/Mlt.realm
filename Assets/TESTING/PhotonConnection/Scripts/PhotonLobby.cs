@@ -67,9 +67,4 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
         battleButton.SetActive(true);
         PhotonNetwork.LeaveRoom();
     }
-
-
-
-
-
 }
