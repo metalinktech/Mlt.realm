@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 2784605250152347512}
   - component: {fileID: 1060640020833991023}
   - component: {fileID: 4415727189302583260}
-  - component: {fileID: 6930608530873249494}
   - component: {fileID: 2610441105683073534}
   - component: {fileID: 2185592338703990696}
   - component: {fileID: 1311593434743472855}
   - component: {fileID: 6280521693476369568}
+  - component: {fileID: 6489188470334053254}
   m_Layer: 0
   m_Name: PlayerAvatar
   m_TagString: Untagged
@@ -53,7 +53,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943084524706415561}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -87,20 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6930608530873249494
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 943084524706415561}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2610441105683073534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,6 +158,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5
   rotationSpeed: 5
+--- !u!114 &6489188470334053254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943084524706415561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feda4d0e811b55845a35fe215e54125c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterValue: 0
+  myCharacter: {fileID: 0}
 --- !u!1 &6294654116523337991
 GameObject:
   m_ObjectHideFlags: 0
