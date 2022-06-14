@@ -1,6 +1,8 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameSetup : MonoBehaviour
@@ -9,7 +11,9 @@ public class GameSetup : MonoBehaviour
 
     public Text healthDisplay;
 
-    public Transform[] spawnPoints;
+    public int nextPlayersTeam;
+    public Transform[] spawnPointsTeamOne;
+    public Transform[] spawnPointsTeamTwo;
 
 
     private void OnEnable()
@@ -17,6 +21,31 @@ public class GameSetup : MonoBehaviour
         if(GameSetup.GS == null)
         {
             GameSetup.GS = this;
+        }
+    }
+
+    public void DisconnectPlayer()
+    {
+        StartCoroutine(DIsconnectAndLoad());
+    }
+
+    IEnumerator DIsconnectAndLoad()
+    {
+        PhotonNetwork.Disconnect();
+        while (PhotonNetwork.IsConnected)
+            yield return null;
+        SceneManager.LoadScene(MuliplayerSetting.muliplayerSetting.menuScene);
+    }
+
+    public void UpdateTeam()
+    {
+        if(nextPlayersTeam == 1)
+        {
+            nextPlayersTeam = 2;
+        }
+        else
+        {
+            nextPlayersTeam = 1;
         }
     }
 }
