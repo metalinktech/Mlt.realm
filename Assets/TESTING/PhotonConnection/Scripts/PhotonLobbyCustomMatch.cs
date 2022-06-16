@@ -28,6 +28,8 @@ public class PhotonLobbyCustomMatch : MonoBehaviourPunCallbacks, ILobbyCallbacks
     {
         Debug.Log("Player has connected to the Photon master server");
         PhotonNetwork.AutomaticallySyncScene = true; //Defines if all clients in a room should automatically load the same level as the Master Client.
+        PhotonNetwork.NickName = "Player " + Random.Range(0, 1000);
+
     }
 
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
